@@ -1,4 +1,6 @@
-body
+
 {
-	background-color: #36688D;
+	background-image: url("https://i.imgur.com/VCVF0tD.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
