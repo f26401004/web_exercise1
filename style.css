@@ -1,13 +1,30 @@
 body
 {
+	/* use background-image to set the background image */
 	background-image: url("https://i.imgur.com/VCVF0tD.png");
+	/*set the white area of the page*/
+	padding: 0;
+	/*set all text in body should be align center*/
+	text-align: center;
+	position: relative;
+	margin: 0;
+	height: 100%;
 }
 
-.dynamic_back
+.wrapper
 {
-	margin-top: 0 px;
-	margin-bottom: 1080 px;
-	margin-left: 0 px;
-	margin-right: 1920 px;
-	position: absolute;
+	height: auto !important;
+    	height: 100%;
+    	margin: 0 auto;
+	/*hide all contens if they exceed thec margin*/
+    	overflow: hidden;
 }
+
+.point_area
+{
+	position: absolute;
+	min-height: 100% !important;
+	width: 100%;
+	z-index: 0;
+}
+
