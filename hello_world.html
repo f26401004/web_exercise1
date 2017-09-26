@@ -1,34 +1,51 @@
 <!DOCTYPE>
-<html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript" src="jquery-latest.min"></script>
+		<script type="text/javascript" src="jquery-latest.min.js"></script>
 		<script type="text/javascript" src="jquery.interactive_bg.js"></script>
-		<script language="text/javascript">
-                	$(".point_area").interactive_bg({
-                        	strength: 30,
-	                        scale: 1.05,
-        	                animationSpeed: "100ms",
-                	        contain: true,
-                        	wrapContent: false
-	                 });
-			 $(window).resize(function() {
-		  	 	$(".wrapper > .ibg-bg").css({
-					width: $(window).outerWidth(),
-					height: $(window).outerHeight()
-				})
-			 })
-	        </script>	
-		<title>Hello World!!</title>
 	</head>
+	<style>
+		body
+		{
+			background-image: url("images/intro_back.png");
+    		padding: 0;
+	    	text-align: center;
+    		font-family: 'open sans';
+    		position: relative;
+	    	margin: 0;
+    		height: 100%;
+	    }
+		.wrapper 
+		{
+    		height: auto !important;
+	    	height: 100%;
+    		margin: 0 auto;
+    		overflow: hidden;
+	    }
+		.bg
+		{
+    		position:static;
+	    	min-height: 100% !important;
+    		width: 100%;
+	    	z-index: 0;
+    	}
+		#photo
+		{
+			margin-top: -40%;
+		}
+		#table
+		{
+			margin-top: -20%;
+		}
+	</style>
 	<body>
-		<div class="wrapper point_area" data-ibg-bg=light_point.png>
+		<div class="wrapper bg" data-ibg-bg="images/light_point.png">
 			<center>
-				<h1><font size=80>Intro.</font></h1>
-				<table width=400 border=1>
+            	<img src="images/photo.png" id="photo"></img>
+				<h1><font size=100 id="title">Intro.</font></h1>
+				<table width=400 border=3 id="table" bgcolor="#EBEBEB" bordercolor="#FFFFFF">
 					<tr>
 						<td>Name</td>
-						<td>黃俊豪</td>
+						<td>CHUN HAO HUANG</td>
 					</tr>
 					<tr>
 						<td>Department</td>
@@ -50,5 +67,19 @@
 			</center>
 		</div>
 	</body>
-
+	<script language="javascript">
+		$(".bg").interactive_bg({
+			strength: 30,
+			scale: 1.05,
+			animationSpeed: "100ms",
+			contain: true,
+			wrapContent: false
+		});
+		$(window).resize(function() {
+			$(".wrapper > .ibg-bg").css({
+				width: $(window).outerWidth(),
+		    	height: $(window).outerHeight()
+			})
+		})
+	</script>
 </html>
